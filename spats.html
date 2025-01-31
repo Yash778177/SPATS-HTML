@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:antiquewhite;
+        }
+        .navbar {
+            background-color: crimson;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5px;
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+        }
+        .bookstore {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: right;
+        }
+        .navbar ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            
+        }
+       
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:navy;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display:block;
+        }
+       
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 100px 20px 20px; 
+        }
+
+        .book-card {
+            background-color: white;
+            padding: 15px;
+            box-shadow: 10px 10px 20px ;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .book-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        
+        .wishlist, .read-more, .buy-now {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 50px;
+            cursor:pointer;
+            
+        }
+        .wishlist {
+            background-color:orange;
+        }
+        .read-more {
+            background-color:dodgerblue;
+            color: white;
+        }
+        .buy-now {
+            background-color:black;
+            color: white;
+        }
+        footer {
+            background-color:black;
+            color: white;
+            text-align: center;
+            padding: 15px ;
+            margin-top: 20px;
+          
+        }
+        footer a {
+            color:#f4f4f4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="bookstore">OXFORD ONLINE STORE</a></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#categories">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#fiction">Fiction</a></li>
+                        <li><a href="#non-fiction">Non-Fiction</a></li>
+                        <li><a href="#mystery">Mystery</a></li>
+                        <li><a href="#fantasy">Fantasy</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <section class="book-grid">
+           
+            <div class="book-card">
+                <img src="https://ew.com/thmb/VXjN75rLOO9xspAhdZ_7P2hfO_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/harry01english-05b4fdcc910a4ae199b34d9cb99e3db6.jpg" alt="Book Cover">
+                <h3>Harry Potter and the Philosopher's Stone</h3>
+                <p>by J.K. ROWLING</p>
+               
+                <p class="price">₹899.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71v25t4QsHL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover">
+                <h3>Believe</h3>
+                <p>by SURESH RAINA</p>
+               
+                <p class="price">₹299.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81Fgux0XJNL._SY425_.jpg" alt="Book Cover">
+                <h3>The Dhoni Touch</h3>
+                <p>by BHARAT SUNDARESAN</p>
+               
+                <p class="price">₹399.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ4S-UypIj7zPNidIXePWqfRe5rx3XbbxRHK76d2Ip_c7cMjbGtcPU8pJSctNJ-r7HxMWjZe7cGt07InXXAFf_NYgCB2jGPWzhbYL4WsqaRP9-uqIw1j1cJDA" alt="Book Cover">
+                <h3>The Time Machine</h3>
+                <p>by H.G. WELLS</p>
+               
+                <p class="price">₹119.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71zy-wjM7kL._SY466_.jpg" alt="Book Cover">
+                <h3>Kashi</h3>
+                <p>by P. NAVEEN KUMAR</p>
+               
+                <p class="price">₹134.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81YNFnjZxkL._SY425_.jpg" alt="Book Cover">
+                <h3>Bhagavad Geeta : As it is</h3>
+                <p>by HIS DIVINE GRACE A.C. BHAKTIVEDANT SWAMI PRABHUPADA</p>
+               
+                <p class="price">₹249.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61IxJuRI39L._SY425_.jpg" alt="Book Cover">
+                <h3>Think and Grow Rich</h3>
+                <p>by NAPOLEON HILL</p>
+               
+                <p class="price">₹399.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://bookspringindia.in/cdn/shop/products/Bsiq_1024x1024@2x.webp?v=1679073176" alt="Book Cover">
+                <h3>Atomic Habits</h3>
+                <p>by JAMES CLEAR</p>
+                <p class="description">A brief description of the book.</p>
+                <p class="price">₹299.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://bookspringindia.in/cdn/shop/products/71g2ednj0JL._AC_UF1000_1000_QL80_FMwebp_1024x1024@2x.webp?v=1679329544" alt="Book Cover">
+                <h3>The Psychology of Money</h3>
+                <p>by MORGAN HOUSEL</p>
+                
+                <p class="price">₹199.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="book-card">
+                <img src="https://bookspringindia.in/cdn/shop/products/lifesamazingsecrets_1024x1024@2x.png?v=1626260375" alt="Book Cover">
+                <h3>Life's Amazing Secret</h3>
+                <p>by GAUR GOPAL DAS</p>
+                
+                <p class="price">₹159.00</p>
+                <button class="wishlist">Add to Wish List</button>
+                <button class="read-more">Read More</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+           
+        </section>
+    </main>
+    
+    <footer>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a></p>
+    </footer>
+</body>
+</html>
